@@ -458,14 +458,115 @@
           </section>
           <section class="subscribe">
             <p class="subscribe-text">Subscribe to the newsletter</p>
+            <div class="footer-email-form">
+              <label for="email">
+                <input
+                  placeholder="E-mail"
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input-mail"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                />
+              </label>
+              <div class="email-input">
+                <button type="submit">
+                  Subscribe
+                  <svg>
+                    <use xlink:href="./images/icons.svg#icon-icon_send"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </section>
         </div>
       </footer>
     </div>
+    <!--Modal-->
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
         <button class="close-btn" data-modal-close>&times;</button>
+
         <p>Leave your information and we'll call you back</p>
+
+        <form class="modal-form" action="" method="get" autocomplete="off">
+          <div class="form-section">
+            <label for="name">Name</label>
+            <div class="input-l">
+              <input type="text" name="name" id="name" class="modal-input" />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-person-modal" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label for="telephone">Telephone</label>
+            <div class="input-l">
+              <input
+                type="tel"
+                name="telephone"
+                id="telephone"
+                class="modal-input"
+              />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-phone-modal" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label for="email">E-mail</label>
+            <div class="input-l">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="modal-input"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-email-modal" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label class="feedback-label">
+              <span class="form-comments">Comments</span>
+              <textarea
+                placeholder="Enter the text"
+                name="feedback"
+                class="modal-input"
+              ></textarea>
+            </label>
+          </div>
+          <div class="checkbox.css">
+            <label class="label-checkbox" for="terms-and-conditions">
+              <input
+                class="checkbox-input"
+                id="terms-and-conditions"
+                type="checkbox"
+                name="terms"
+              />
+              <!-- <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-vector-modal"></use>
+            </svg>-->
+              <svg class="icon-check modal-icon">
+                <use
+                  href="./images/icons.svg#icon-icon-check"
+                  width="16px"
+                  height="16px"
+                ></use>
+              </svg>
+              <span
+                >I agree with the letter and accept the
+                <a href="">Terms and Conditions</a></span
+              >
+            </label>
+          </div>
+        </form>
+        <button class="modal-button" type="submit">Send</button>
       </div>
     </div>
 
